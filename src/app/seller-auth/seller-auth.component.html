@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 m-auto rounded mt-5 bg-info-subtle shadow p-3">
+      <form (ngSubmit)="sellerLogin(SellerForm)" #SellerForm="ngForm" *ngIf="signup">
+        <h3>Sign UP Form</h3>
+        <div class="mb-3">
+          <label for="username" class="form-label">User Name</label>
+          <input type="text" name="name" ngModel class="form-control" id="username" aria-describedby="usernamehelp">
+          <div id="usernamehelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" name="email" ngModel class="form-control" id="exampleInputEmail1"
+            aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" name="password" ngModel class="form-control" id="exampleInputPassword1">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button class="ms-5 btn btn-primary" type="button" (click)="isRegister()">Allredy Register Go To Login</button>
+      </form>
+      <form (ngSubmit)="sellerLogin(SellerForm)" #SellerForm="ngForm" *ngIf="!signup">
+        <h3>Login Form</h3>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" name="email" ngModel class="form-control" id="exampleInputEmail1"
+            aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" name="password" ngModel class="form-control" id="exampleInputPassword1">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" class="ms-5 btn btn-primary" (click)="isRegister()">Go To Sign Up Page For Registration</button>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Password</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let form of sellerDetails; index as id">
+            <th scope="row">{{id+1}}</th>
+            <td>{{form.name}}</td>
+            <td>{{form.email}}</td>
+            <td>{{form.password}}</td>
+            <td (click)="delet(id)">Delet</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
