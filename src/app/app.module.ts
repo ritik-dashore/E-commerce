@@ -8,12 +8,14 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    SellerAuthComponent
+    SellerAuthComponent,
+    SellerAddProductComponent
   ],
   imports: [
     BrowserModule,

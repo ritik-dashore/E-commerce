@@ -2,15 +2,41 @@
   "sellerInfo": [
     {
       "name": "Monika",
-      "email": "monika@gmail.com",
-      "password": "monika123",
+      "email": "mohan@gmail.com",
+      "password": "12345",
       "id": 1
+    },
+    {
+      "name": "mohan",
+      "email": "mohan@gmail.com",
+      "password": "12345",
+      "id": 2
     },
     {
       "name": "Mahesh",
       "email": "mahesh@test.com",
-      "password": "mahesh123",
+      "password": "5632",
       "id": 3
+    },
+    {
+      "name": "Monika12",
+      "email": "Monika@test.com",
+      "password": "1234558",
+      "id": 4
+    },
+    {
+      "name": "Sonu12",
+      "email": "sonu@test.com",
+      "password": "123654",
+      "id": 5
+    }
+  ],
+  "product": [
+    {
+      "name": "tv",
+      "color": "Balck",
+      "cataegory": 1231,
+      "id": 1
     }
   ]
 }
